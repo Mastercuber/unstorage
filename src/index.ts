@@ -26,6 +26,7 @@ export const builtinDrivers = {
   redis: "unstorage/drivers/redis",
   sessionStorage: "unstorage/drivers/session-storage",
   vercelKV: "unstorage/drivers/vercel-kv",
+  yjs: "unstorage/drivers/yjs",
 
   /** @deprecated */
   "cloudflare-kv-binding": "unstorage/drivers/cloudflare-kv-binding",
@@ -78,7 +79,7 @@ export type BuiltinDriverOptions = {
     (typeof import("./drivers/session-storage"))["default"]
   >;
   vercelKV: ExtractOpts<(typeof import("./drivers/vercel-kv"))["default"]>;
-
+  yjs: ExtractOpts<(typeof import("./drivers/yjs"))["default"]>;
   /** @deprecated */
   "cloudflare-kv-binding": ExtractOpts<
     (typeof import("./drivers/cloudflare-kv-binding"))["default"]
